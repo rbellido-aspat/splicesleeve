@@ -1,6 +1,10 @@
 {
+  "trailingSlash": "always",
   "responseOverrides": {
-    "404": { "rewrite": "/404.html", "statusCode": 404 }
+    "404": {
+      "rewrite": "/404.html",
+      "statusCode": 404
+    }
   },
   "globalHeaders": {
     "X-Content-Type-Options": "nosniff",
@@ -8,8 +12,14 @@
     "Content-Security-Policy": "default-src 'self'; img-src 'self' data: https://www.nmbsplicesleeve.com https://www.splicesleeve.com https://*.google-analytics.com https://*.googletagmanager.com; style-src 'self' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; script-src 'self' https://*.googletagmanager.com; connect-src 'self' https://*.google-analytics.com https://*.analytics.google.com https://*.googletagmanager.com; frame-src https://www.youtube-nocookie.com; base-uri 'self'; form-action 'none'"
   },
   "routes": [
-    { "route": "/README.md", "statusCode": 404 },
-    { "route": "/.github/*", "statusCode": 404 }
+    {
+      "route": "/README.md",
+      "statusCode": 404
+    },
+    {
+      "route": "/.github/*",
+      "statusCode": 404
+    }
   ],
   "mimeTypes": {
     ".svg": "image/svg+xml",

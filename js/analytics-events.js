@@ -2,7 +2,11 @@
 // Nunca se envían números, correos ni nombres: los textos de los botones
 // de contacto vienen de data-cta, no del texto visible.
 (function () {
+  // Tipo de página (portada, comparativa, pais, hub) desde <body data-page-type>
+  var pageType = document.body.getAttribute("data-page-type") || "portada";
+
   function send(name, params) {
+    params.page_type = pageType;
     if (typeof window.gtag === "function") window.gtag("event", name, params);
   }
 
@@ -29,6 +33,11 @@
     // Botones principales
     if (a.hasAttribute("data-cta")) {
       send("cta_click", { cta_text: a.getAttribute("data-cta"), link_location: where });
+    }
+
+    // Solicitud de revisión de un detalle de conexión (se suma a contact_click)
+    if (a.getAttribute("data-event") === "connection_review_start") {
+      send("connection_review_start", { link_location: where });
     }
 
     // Contactos: WhatsApp (mailto: y tel: quedan cubiertos si se agregan)
