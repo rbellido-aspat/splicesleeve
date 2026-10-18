@@ -16,7 +16,7 @@ El dominio `splicesleeve.bdl.cl` se usa en `index.html` (canonical y og:url), `r
 
 ## Contenido
 
-Sitio estático (`index.html`, `styles.css`, `main.js`) con páginas internas en carpetas con `index.html`: `/comparativas/`, tres comparativas en `/comparativas/<slug>/` y `/chile/`. Las páginas internas comparten encabezado y pie, y se generan con un script local que vive fuera del repositorio. Todas las rutas son absolutas y terminan en barra (`trailingSlash: always`); al agregar una página, súmala a `sitemap.xml`. Imágenes de producto, certificaciones, manuales, modelos BIM y videos se enlazan directamente desde los sitios oficiales, sin copias locales:
+Sitio estático (`index.html`, `styles.css`, `main.js`) con páginas internas en carpetas con `index.html`: `/comparativas/`, tres comparativas en `/comparativas/<slug>/` y `/chile/`. Las páginas internas comparten encabezado y pie, y se generan con un script local que vive fuera del repositorio. Todas las rutas son absolutas y terminan en barra (`trailingSlash: auto`, que agrega la barra a carpetas y no a archivos); al agregar una página, súmala a `sitemap.xml`. Imágenes de producto, certificaciones, manuales, modelos BIM y videos se enlazan directamente desde los sitios oficiales, sin copias locales:
 
 - https://www.nmbsplicesleeve.com/
 - https://www.splicesleeve.com/
