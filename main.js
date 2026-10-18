@@ -84,60 +84,32 @@
   setPaused(paused);
 })();
 
-// Video de la obra Batán: bucle mudo en la portada y reel completo en un diálogo
+// Video horizontal de la obra Batán: en pantallas grandes empieza mudo al
+// llegar a la vista; en el celular (preload="none") se descarga al tocar play
 (function () {
-  var loop = document.querySelector(".reel__loop");
-  var dialog = document.querySelector(".reel-dialog");
-  var openBtn = document.querySelector("[data-reel-open]");
-  if (!loop || !dialog || !openBtn) return;
+  var video = document.querySelector(".obra__video video");
+  if (!video) return;
 
-  var full = dialog.querySelector("video");
   var reduced = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-  var wide = window.matchMedia("(min-width: 861px)");
+  var wide = window.matchMedia("(min-width: 861px)").matches;
   var saveData = navigator.connection && navigator.connection.saveData;
+  var sent = false;
 
-  // El bucle mudo solo corre en pantallas grandes; en el celular queda el póster
-  // y el video se descarga recién cuando la persona lo pide
-  function startLoop() {
-    if (reduced || saveData || !wide.matches) return;
-    if (loop.hasAttribute("data-src")) {
-      loop.src = loop.getAttribute("data-src");
-      loop.removeAttribute("data-src");
-    }
-    var p = loop.play();
-    if (p && p.catch) p.catch(function () {});
-  }
-  if (document.readyState === "complete") startLoop();
-  else window.addEventListener("load", startLoop);
-  if (wide.addEventListener) wide.addEventListener("change", startLoop);
-
-  function open() {
-    if (full.hasAttribute("data-src")) {
-      full.src = full.getAttribute("data-src");
-      full.removeAttribute("data-src");
-    }
-    loop.pause();
-    if (typeof dialog.showModal === "function") dialog.showModal();
-    else dialog.setAttribute("open", "");
-    var p = full.play();
-    if (p && p.catch) p.catch(function () {});
-    if (typeof window.gtag === "function") {
-      window.gtag("event", "video_start", { video_title: "Obra Batán Precreto", link_location: "hero" });
-    }
-  }
-
-  function close() {
-    full.pause();
-    if (dialog.open && typeof dialog.close === "function") dialog.close();
-    else dialog.removeAttribute("open");
-  }
-
-  openBtn.addEventListener("click", open);
-  dialog.addEventListener("click", function (e) {
-    if (e.target === dialog || e.target.closest("[data-reel-close]")) close();
+  video.addEventListener("play", function () {
+    if (sent || typeof window.gtag !== "function") return;
+    sent = true;
+    window.gtag("event", "video_start", { video_title: "Obra Batán Precreto", link_location: "video_batan" });
   });
-  dialog.addEventListener("close", function () {
-    full.pause();
-    if (!loop.hasAttribute("data-src")) loop.play().catch(function () {});
-  });
+
+  if (reduced || saveData || !wide || !("IntersectionObserver" in window)) return;
+  new IntersectionObserver(function (entries) {
+    entries.forEach(function (e) {
+      if (e.isIntersecting) {
+        var p = video.play();
+        if (p && p.catch) p.catch(function () {});
+      } else if (!video.paused) {
+        video.pause();
+      }
+    });
+  }, { threshold: 0.5 }).observe(video);
 })();

@@ -22,13 +22,12 @@ Sitio estático (`index.html`, `styles.css`, `main.js`) con páginas internas en
 - https://www.splicesleeve.com/
 - https://icc-es.org/
 
-Caso de éxito en Latinoamérica: edificio de oficinas Batán, Guayaquil, con prefabricados Precreto. Sus fotos son las únicas imágenes locales: dos en `img/` para la sección del caso y ocho en `img/batan/` para el carrusel de la portada (1920 y 1280 px, sin metadatos GPS). Videos en https://www.instagram.com/precreto/
+Caso de éxito en Latinoamérica: edificio de oficinas Batán, Guayaquil, con prefabricados Precreto. Sus fotos son las únicas imágenes locales: dos en `img/` para la sección del caso y ocho en `img/batan/` para el carrusel de la portada (1920 y 1280 px, sin metadatos GPS). Videos en https://www.instagram.com/precreto/. La portada también incrusta el webinar de UTEC (YouTube MEu2rb_3yus) y enlaza tres artículos de prensa.
 
 Video de la obra en `media/`, comprimido desde el reel original de Precreto (218 MB, 4K a 60 fps):
 
-- `batan-loop.mp4`, 15 s, 540x960, sin audio, bucle de la portada. Solo se descarga en pantallas de más de 860 px.
-- `batan-reel.mp4`, 56 s, 540x960, con audio, se abre al tocar "Ver video".
-- `batan-reel-poster.jpg`, imagen fija mientras el video no carga.
+- `batan-obra-horizontal.mp4`, 56 s, 1280x720 con audio. El reel vertical va al centro y los costados se rellenan con la misma imagen desenfocada. En pantallas grandes empieza mudo al llegar a la vista; en el celular se descarga al tocar play.
+- `batan-obra-horizontal-poster.jpg`, imagen fija mientras el video no carga.
 
 El contacto es solo por WhatsApp (+56 9 9243 3573), sin formularios.
 
