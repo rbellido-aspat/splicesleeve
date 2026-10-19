@@ -50,6 +50,18 @@
       return;
     }
 
+    // PDF propios en /docs/ (descarga directa desde este sitio)
+    if (url.origin === location.origin && /\.pdf$/i.test(url.pathname)) {
+      send("file_download", {
+        file_name: url.pathname.split("/").pop(),
+        link_text: textOf(a),
+        link_url: url.href,
+        link_domain: url.hostname,
+        link_location: where
+      });
+      return;
+    }
+
     if (url.origin === location.origin) return;
 
     // Documentos del fabricante, URL sin extensión (/download/NNN/)

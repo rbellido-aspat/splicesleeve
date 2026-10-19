@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 420" width="1200" height="420" role="img" aria-labelledby="t d" font-family="Lato, Calibri, Arial, sans-serif">
+  <title id="t">Ruta habitual para proteger una solución constructiva propia</title>
+  <desc id="d">Línea de tiempo: antes de divulgar, búsqueda y acuerdos; primera solicitud que fija la fecha de prioridad; dentro de 12 meses, solicitudes en otros países por la vía de París o PCT; habitualmente a los 30 meses, fases nacionales o regionales del PCT.</desc>
+  <rect x="0" y="0" width="1200" height="420" fill="#ffffff"/>
+  <text x="600" y="46" font-size="22" font-weight="700" fill="#0b2545" text-anchor="middle">Ruta habitual de protección internacional</text>
+
+  <line x1="120" y1="200" x2="1080" y2="200" stroke="#13315c" stroke-width="4"/>
+  <path d="M1080 188 L1104 200 L1080 212 z" fill="#13315c"/>
+
+  <g stroke="#13315c" stroke-width="3">
+    <circle cx="170" cy="200" r="16" fill="#ffffff"/>
+    <circle cx="420" cy="200" r="16" fill="#c8102e"/>
+    <circle cx="700" cy="200" r="16" fill="#3d7a9c"/>
+    <circle cx="980" cy="200" r="16" fill="#3d7a9c"/>
+  </g>
+
+  <g font-size="18" font-weight="700" fill="#0b2545" text-anchor="middle">
+    <text x="170" y="150">Antes de divulgar</text>
+    <text x="420" y="150">Mes 0</text>
+    <text x="700" y="150">Hasta el mes 12</text>
+    <text x="980" y="150">Cerca del mes 30</text>
+  </g>
+  <g font-size="15" fill="#22303f" text-anchor="middle">
+    <text x="170" y="250">Búsqueda de antecedentes,</text>
+    <text x="170" y="270">aporte técnico definido,</text>
+    <text x="170" y="290">acuerdos de titularidad</text>
+    <text x="420" y="250">Primera solicitud:</text>
+    <text x="420" y="270">fija la fecha de prioridad,</text>
+    <text x="420" y="290">no equivale a concesión</text>
+    <text x="700" y="250">Solicitudes en otros países</text>
+    <text x="700" y="270">por la vía de París</text>
+    <text x="700" y="290">o una solicitud PCT</text>
+    <text x="980" y="250">Fases nacionales o</text>
+    <text x="980" y="270">regionales del PCT;</text>
+    <text x="980" y="290">cada oficina decide</text>
+  </g>
+
+  <text x="600" y="370" font-size="14" fill="#4a5563" text-anchor="middle">No existe una patente mundial única. Plazos de referencia según la OMPI; confirma los de cada oficina. Elaboración propia.</text>
+</svg>

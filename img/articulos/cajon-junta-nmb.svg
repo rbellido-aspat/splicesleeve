@@ -1,0 +1,71 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 520" width="1200" height="520" role="img" aria-labelledby="t d" font-family="Lato, Calibri, Arial, sans-serif">
+  <title id="t">Junta entre módulos de cajón prefabricado con manguitos NMB</title>
+  <desc id="d">A la izquierda, sección transversal de un cajón prefabricado con manguitos en losas y hastiales. A la derecha, vista lateral de la junta entre dos módulos: las barras de espera del módulo A entran en los manguitos embebidos en el módulo B, que se inyectan desde el puerto inferior hasta la salida por el superior.</desc>
+  <rect x="0" y="0" width="1200" height="520" fill="#ffffff"/>
+
+  <!-- Sección transversal -->
+  <text x="270" y="44" font-size="20" font-weight="700" fill="#0b2545" text-anchor="middle">Sección del cajón</text>
+  <rect x="90" y="80" width="360" height="300" fill="#cdd5dd" stroke="#22303f" stroke-width="3"/>
+  <rect x="140" y="130" width="260" height="200" fill="#ffffff" stroke="#22303f" stroke-width="2.5"/>
+  <!-- Manguitos en losas y hastiales (puntos) -->
+  <g fill="#3d7a9c" stroke="#22303f" stroke-width="1.5">
+    <circle cx="150" cy="105" r="8"/><circle cx="215" cy="105" r="8"/><circle cx="270" cy="105" r="8"/><circle cx="325" cy="105" r="8"/><circle cx="390" cy="105" r="8"/>
+    <circle cx="150" cy="355" r="8"/><circle cx="215" cy="355" r="8"/><circle cx="270" cy="355" r="8"/><circle cx="325" cy="355" r="8"/><circle cx="390" cy="355" r="8"/>
+    <circle cx="115" cy="170" r="8"/><circle cx="115" cy="230" r="8"/><circle cx="115" cy="290" r="8"/>
+    <circle cx="425" cy="170" r="8"/><circle cx="425" cy="230" r="8"/><circle cx="425" cy="290" r="8"/>
+  </g>
+  <g font-size="15" fill="#22303f">
+    <text x="270" y="72" text-anchor="middle">losa superior</text>
+    <text x="270" y="404" text-anchor="middle">losa inferior</text>
+    <text x="270" y="236" text-anchor="middle" fill="#4a5563">vano hidráulico</text>
+    <text x="70" y="235" text-anchor="end">hastial</text>
+  </g>
+  <g>
+    <circle cx="120" cy="448" r="8" fill="#3d7a9c" stroke="#22303f" stroke-width="1.5"/>
+    <text x="136" y="453" font-size="15" fill="#22303f">manguito NMB embebido en el módulo</text>
+  </g>
+
+  <!-- Vista lateral de la junta -->
+  <text x="850" y="44" font-size="20" font-weight="700" fill="#0b2545" text-anchor="middle">Junta entre módulos, vista lateral</text>
+  <!-- Módulo A -->
+  <rect x="560" y="120" width="250" height="240" fill="#e7ebef" stroke="#22303f" stroke-width="3"/>
+  <!-- Módulo B -->
+  <rect x="840" y="120" width="290" height="240" fill="#cdd5dd" stroke="#22303f" stroke-width="3"/>
+  <!-- Junta -->
+  <rect x="810" y="120" width="30" height="240" fill="#e5a347" stroke="#22303f" stroke-width="1.5"/>
+  <!-- Barras de espera desde A -->
+  <g stroke="#22303f" stroke-width="5">
+    <line x1="590" y1="165" x2="930" y2="165"/>
+    <line x1="590" y1="240" x2="930" y2="240"/>
+    <line x1="590" y1="315" x2="930" y2="315"/>
+  </g>
+  <!-- Manguitos en B -->
+  <g fill="#3d7a9c" stroke="#22303f" stroke-width="2">
+    <rect x="850" y="150" width="150" height="30" rx="6"/>
+    <rect x="850" y="225" width="150" height="30" rx="6"/>
+    <rect x="850" y="300" width="150" height="30" rx="6"/>
+  </g>
+  <!-- Barras de B -->
+  <g stroke="#22303f" stroke-width="5">
+    <line x1="960" y1="165" x2="1110" y2="165"/>
+    <line x1="960" y1="240" x2="1110" y2="240"/>
+    <line x1="960" y1="315" x2="1110" y2="315"/>
+  </g>
+  <!-- Puertos del manguito inferior -->
+  <g stroke="#c8102e" stroke-width="3">
+    <line x1="870" y1="330" x2="870" y2="360"/>
+    <line x1="985" y1="300" x2="985" y2="270"/>
+  </g>
+  <g font-size="15" fill="#22303f">
+    <text x="685" y="110" text-anchor="middle">módulo A</text>
+    <text x="985" y="110" text-anchor="middle">módulo B</text>
+    <text x="825" y="392" text-anchor="middle">junta</text>
+    <text x="640" y="200">barras de espera</text>
+    <text x="870" y="420" text-anchor="middle" fill="#c8102e">inyección por el puerto inferior</text>
+    <text x="1060" y="290" fill="#c8102e">salida</text>
+  </g>
+  <line x1="1056" y1="285" x2="990" y2="272" stroke="#c8102e" stroke-width="1.2"/>
+  <line x1="870" y1="404" x2="870" y2="364" stroke="#c8102e" stroke-width="1.2"/>
+
+  <text x="600" y="500" font-size="13" fill="#4a5563" text-anchor="middle">Esquema conceptual sin escala. Cantidad y ubicación de manguitos según el cálculo de cada proyecto. Elaboración propia.</text>
+</svg>
